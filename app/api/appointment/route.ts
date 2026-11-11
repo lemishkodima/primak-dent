@@ -7,11 +7,12 @@ function clean(value: unknown, maxLength: number) {
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json() as { name?: unknown; phone?: unknown; website?: unknown };
+    const body = await request.json() as { name?: unknown; phone?: unknown; website?: unknown; consent?: unknown };
     const name = clean(body.name, 80);
     const phone = clean(body.phone, 24);
     const website = clean(body.website, 120);
     if (website) return Response.json({ ok: true });
+    if (body.consent !== true) return Response.json({ ok: false, error: "consent_required" }, { status: 400 });
     if (name.length < 2 || phone.replace(/\D/g, "").length < 8) return Response.json({ ok: false, error: "invalid_form" }, { status: 400 });
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;

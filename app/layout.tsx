@@ -3,6 +3,8 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dent.primakdentclinic.com"),
+  alternates: { canonical: "/" },
   title: "Primak Dent — сучасна стоматологія в Києві",
   description: "Комплексна стоматологія для дорослих і дітей біля метро Дорогожичі.",
   icons: {
