@@ -56,7 +56,7 @@ export default function Home() {
     <>
       <div className="topbar"><div className="wrap"><span>м. Київ · метро Дорогожичі</span><span>Пн–Сб 09:00–19:00</span></div></div>
       <header><div className="wrap nav">
-        <a className="brand" href="#top" aria-label="Primak Dent — на головну"><span className="logo-mark">PD</span><span><b>PRIMAK DENT</b><small>сучасна стоматологія</small></span></a>
+        <a className="brand clinic-brand" href="#top" aria-label="Primak Dent — на головну"><img src="/primak-dent-logo.jpg" width="500" height="500" alt="Primak Dent — Dental Clinic" fetchPriority="high" /></a>
         <nav className="menu" aria-label="Головна навігація"><a href="#services">Послуги</a><a href="#why">Чому ми</a><a href="/doctors">Лікарі</a><a href="#prices">Ціни</a><a href="#reviews">Відгуки</a><a href="#contacts">Контакти</a></nav>
         <div className="actions"><a className="phone" href="tel:+380988800202">098 880 02 02</a><a className="btn primary" href="#contacts">Записатися</a></div>
       </div></header>
